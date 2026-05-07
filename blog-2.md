@@ -1,0 +1,4 @@
+Generics are TypeScript’s way of writing “flexible but still strict” code. Instead of locking a function or component to one specific type, you let it adapt based on what you pass in, while still remembering that type everywhere.
+Think of a function as a machine. Without generics, it only works for one material. With generics, it becomes a smart machine that adjusts itself for wood, metal, or glass but still knows exactly what it’s working with at every step.
+For example, a generic function like getProperty<T, K extends keyof T> doesn’t care what object you pass. It learns the object’s shape and only allows valid keys. If you pass a user object, it enforces user keys. If you pass a product object, it enforces product keys.
+This is the real power: reuse without losing type safety. You avoid duplication, reduce bugs, and still get full IntelliSense support. Generics let you write once, but safely handle many data structures without turning TypeScript into “any-land.”
